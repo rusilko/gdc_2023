@@ -2,8 +2,9 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'set'
 
-class Game
-
+class Cell
+  def initialize
+  end
 end
 
 class GameTest < MiniTest::Unit::TestCase
@@ -12,8 +13,10 @@ class GameTest < MiniTest::Unit::TestCase
     # store instances in instance variables
   end
 
-  def test_game
+  def test_cell
+    c = Cell.new(0,0,true)
 
+    assert c.alive?
   end
 end
 
